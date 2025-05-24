@@ -62,7 +62,7 @@ function M.jump_tab(location, node, offset_encoding)
     -- if the panel currently has a component "popped-out"
     -- close it before jumping.
     lib_panel.close_current_popout()
-    vim.lsp.util.jump_to_location(location, offset_encoding or "utf-8")
+    vim.lsp.util.show_document(location, offset_encoding or "utf-8")
     M.set_jump_hl(true, node)
 end
 
@@ -83,7 +83,7 @@ function M.jump_split(split, location, node, offset_encoding)
     -- if the panel currently has a component "popped-out"
     -- close it before jumping.
     lib_panel.close_current_popout()
-    vim.lsp.util.jump_to_location(location, offset_encoding or "utf-8")
+    vim.lsp.util.show_document(location, offset_encoding or "utf-8")
     M.set_jump_hl(true, node)
 end
 
@@ -103,7 +103,7 @@ function M.jump_neighbor(location, node, offset_encoding)
     -- if the panel currently has a component "popped-out"
     -- close it before jumping.
     lib_panel.close_current_popout()
-    vim.lsp.util.jump_to_location(location, offset_encoding or "utf-8")
+    vim.lsp.util.show_document(location, offset_encoding or "utf-8")
     M.set_jump_hl(true, node)
 
     -- cleanup any [No Name] buffers if they exist
@@ -147,7 +147,7 @@ function M.jump_invoking(location, win, node, offset_encoding)
     -- if the panel currently has a component "popped-out"
     -- close it before jumping.
     lib_panel.close_current_popout()
-    vim.lsp.util.jump_to_location(location, offset_encoding or "utf-8")
+    vim.lsp.util.show_document(location, offset_encoding or "utf-8")
     M.set_jump_hl(true, node)
 
     -- cleanup any [No Name] buffers if they exist
